@@ -47,7 +47,8 @@ class Solution
   end
 
   def load_collection(file_path)
-    #place solution here
+    documents = self.class.load_hash(file_path)
+    @coll.insert_many(documents)
   end
 
   def insert(race_result)
