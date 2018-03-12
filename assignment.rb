@@ -64,7 +64,7 @@ class Solution
   end
 
   def find_by_name(fname, lname)
-    #place solution here
+    @coll.find(first_name: fname, last_name: lname).projection(number: true, first_name: true, last_name:true, _id: false)
   end
 
   #
