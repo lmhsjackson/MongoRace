@@ -52,7 +52,7 @@ class Solution
   end
 
   def insert(race_result)
-    #place solution here
+    @coll.insert_one(race_result)
   end
 
   #
@@ -60,7 +60,7 @@ class Solution
   #
 
   def all(prototype={})
-    #place solution here
+    @coll.find(prototype)
   end
 
   def find_by_name(fname, lname)
